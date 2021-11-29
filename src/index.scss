@@ -1,0 +1,92 @@
+@import './styles/fonts.scss';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "SFUIText-Regular";
+  overflow-y: scroll;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+*,
+*::before,
+*::after,
+*:hover {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #000;
+}
+
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.page-wrapper {
+  padding: 0 calc(50% - 590px);
+  padding-bottom: 20px;
+  background-color: #e8fbf3;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.content-place {
+  position: relative;
+  width: 60%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-right-radius: 2rem;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+.profile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-size: 35px;
+  top: 17px;
+  right: 17px;
+  width: 53px;
+  height: 53px;
+  border-radius: 50%;
+  background-color: #c484ff;
+  cursor: pointer;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+}
+
+.modal-wrapper {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@import './styles/media/indexMedia.scss'

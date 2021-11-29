@@ -1,0 +1,60 @@
+.auth-page {
+    padding: 0 calc(50% - 590px);
+    background-color: #e8fbf3;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #cdcdcd;
+    border-radius: 2rem;
+    background-color: #fff;
+    height: fit-content;
+    padding: 10px 25px 5px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__label {
+        visibility: hidden;
+        height: 0;
+    }
+
+    &__input {
+        border: 2px solid #cdcdcd;
+        border-radius: 2rem;
+        padding: 3px 6px;
+        line-height: 25px;
+        margin-bottom: 10%;
+        outline: none;
+    }
+
+    &__input:focus-visible {
+        border-color: #2196f3;
+    }
+
+    &__button {
+        font-size: 15px;
+        padding: 5px 15px;
+        background-color: #bcfffc;
+        border: 1px solid #70d9d4;
+        border-radius: 1rem;
+        margin-bottom: 5px;
+        cursor: pointer;
+        transition: .2s;
+    }
+
+    &__button:hover {
+        transform: scale(1.05);
+    }
+
+    &__span {
+        font-size: 12px;
+    }
+}

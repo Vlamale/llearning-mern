@@ -1,0 +1,14 @@
+@media (max-width: 700px) {
+    .profile-img {
+        right: calc(7px + 10 * ((100vmin - 320px) / 380));
+        top: calc(7px + 10 * ((100vmin - 320px) / 380));
+        width: calc(40px + 13 * ((100vmin - 320px) / 380));
+        height: calc(40px + 13 * ((100vmin - 320px) / 380));
+        font-size: calc(30px + 5 * ((100vmin - 320px) / 380));
+    }
+
+    .content-place {
+        width: 90%;
+        font-size: 14px;
+    }
+}

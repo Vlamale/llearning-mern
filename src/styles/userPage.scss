@@ -1,0 +1,90 @@
+.user-page {
+
+    &__title {
+        margin: 7vh 0;
+    }
+
+    &__data {
+        display: flex;
+        padding: 0 15px;
+    }
+
+    &__profile-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        width: 80px;
+        height: 80px;
+        background-color: #c484ff;
+        text-decoration: none;
+        margin-right: 20px;
+    }
+
+    &__info {
+        max-width: 60%;
+    }
+
+    &__info_title {
+        margin-bottom: 4vh;
+    }
+
+    &__info_data-list {
+        list-style: none;
+        padding-left: 10px;
+        border-left: 2px solid #cdcdcd;
+        margin-bottom: 4vh;
+    }
+
+    &__info_data {
+        margin-bottom: 1vh;
+    }
+
+    &__activate-link {
+        text-decoration: none;
+        color: #2700ff;
+        cursor: pointer;
+    }
+
+    &__back-btn {
+        position: absolute;
+        border: none;
+        left: 0;
+        top: 0;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        color: #fff;
+        background-color: #2196f3;
+        border-bottom-right-radius: 10px;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    &__back-btn:hover {
+        transform: scale(1.1);
+    }
+
+    &__logout-btn {
+        position: absolute;
+        border: none;
+        right: 0;
+        top: 0;
+        padding: 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        color: #fff;
+        background-color: #fd396a;
+        border-bottom-left-radius: 10px;
+        transition: .3s;
+        cursor: pointer;
+    }
+
+    &__logout-btn:hover {
+        transform: scale(1.1);
+    }
+}

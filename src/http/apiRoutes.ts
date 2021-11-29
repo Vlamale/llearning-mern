@@ -1,0 +1,7 @@
+export const API_URL = 'http://localhost:5000/api'
+export const REGISTRATION_ROUTE = '/user/registration'
+export const LOGIN_ROUTE = '/user/login'
+export const LOGOUT_ROUTE = '/user/logout'
+export const REFRESH_ROUTE = '/user/refresh'
+export const CREATE_SECTION_ROUTE = '/section/create'
+export const CREATE_CARD_ROUTE = '/card/create'
