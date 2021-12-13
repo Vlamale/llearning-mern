@@ -137,11 +137,18 @@
         border-radius: 2px;
         background-color: #fff;
         list-style: none;
-        transition: .3s;
+    }
+
+    &__options-param {
+        padding: 5px;
         cursor: pointer;
     }
 
-    &__options-list:hover {
+    &__options-param:not(:last-child) {
+        border-bottom: 1px solid #e5e4e4;
+    }
+
+    &__options-param:hover {
         background-color: #cdcdcd;
     }
 
