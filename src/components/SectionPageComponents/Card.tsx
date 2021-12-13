@@ -23,9 +23,14 @@ const Card: React.FC<ICardProps> = ({ card: { picture, translation, word, _id } 
 
     const deleteCard = async () => {
         dispatch(UserActions.setLoading(true))
-        const {data} = await UserApi.deleteCard(_id)
+        const { data } = await UserApi.deleteCard(_id)
         setCards(data)
         dispatch(UserActions.setLoading(false))
+    }
+
+    const copyCard = () => {
+        navigator.clipboard.writeText(`${word.replaceAll("<[^>]*>", "")} - ${translation.replaceAll("<[^>]*>", "")}`)
+        setParamDropDownStatus(false)
     }
 
     return (
@@ -33,18 +38,18 @@ const Card: React.FC<ICardProps> = ({ card: { picture, translation, word, _id } 
             <div className="section-page__word section-page__word-term">
                 <span
                     className={`section-page__word-span ${displayMode === 'term' ? 'section-page__hide-span' : undefined}`}
-                    style={{cursor: displayMode === 'term' ? 'pointer' : undefined}}
+                    style={{ cursor: displayMode === 'term' ? 'pointer' : undefined }}
                     onClick={(e) => showWordHandler(e, 'term')}
-                    dangerouslySetInnerHTML={{__html: word}}
+                    dangerouslySetInnerHTML={{ __html: word }}
                 ></span>
                 <span className="section-page__word_term-span unselectable">термин</span>
             </div>
             <div className="section-page__word">
                 <span
                     className={`section-page__word-span ${displayMode === 'translation' ? 'section-page__hide-span' : undefined}`}
-                    style={{cursor: displayMode === 'translation' ? 'pointer' : undefined}}
+                    style={{ cursor: displayMode === 'translation' ? 'pointer' : undefined }}
                     onClick={(e) => showWordHandler(e, 'translation')}
-                    dangerouslySetInnerHTML={{__html: translation}}
+                    dangerouslySetInnerHTML={{ __html: translation }}
                 ></span>
                 <span className="section-page__word_translate-span unselectable">перевод</span>
             </div>
@@ -57,10 +62,16 @@ const Card: React.FC<ICardProps> = ({ card: { picture, translation, word, _id } 
                 title="Удалить карточку"
             />
             <ul className="section-page__options-list" style={{ "display": paramDropDownStatus ? "block" : "none" }}>
-                <li 
-                onClick={() => deleteCard()}
-                className="section-page__options-param"
-                >Удалить</li>
+                <li
+                    onClick={() => copyCard()}
+                    className="section-page__options-param"
+                >Копировать карточку
+                </li>
+                <li
+                    onClick={() => deleteCard()}
+                    className="section-page__options-param"
+                >Удалить
+                </li>
             </ul>
         </section>
     )
