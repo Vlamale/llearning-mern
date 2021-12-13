@@ -29,7 +29,8 @@ const Card: React.FC<ICardProps> = ({ card: { picture, translation, word, _id } 
     }
 
     const copyCard = () => {
-        navigator.clipboard.writeText(`${word.replaceAll("<[^>]*>", "")} - ${translation.replaceAll("<[^>]*>", "")}`)
+        const copyText = `${word} - ${translation}`
+        navigator.clipboard.writeText(copyText.replaceAll(/(<([^>]+)>)/ig, ""))
         setParamDropDownStatus(false)
     }
 
